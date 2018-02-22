@@ -28,8 +28,8 @@ export class ClockComponent implements OnInit {
     this.timeFormat = this.checkTimeFormat(this.timeFormat);
   }
   onRightClick(event) {
+    event.preventDefault();
     this.changeView();
-    return false;
   }
   changeView() {
     this.router.navigate(['/calendar']);

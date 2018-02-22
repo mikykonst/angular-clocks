@@ -26,9 +26,9 @@ export class CalendarComponent implements OnInit {
   changeDateFormat() {
     this.dateFormat = this.checkDateFormat(this.dateFormat);
   }
-  onRightClick() {
+  onRightClick(event) {
+    event.preventDefault();
     this.changeView();
-    return false;
   }
   changeView() {
     this.router.navigate(['/']);
